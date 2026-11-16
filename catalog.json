@@ -1,0 +1,181 @@
+{
+  "sourceRepository": "merrypranxter/shaderslop_designs",
+  "sketches": [
+    {
+      "name": "neon-trash-oracle_20260709_112945",
+      "family": "neon",
+      "source": "myspace_glitch/06-glitch-math-hybrids/neon-trash-oracle_20260709_112945.html",
+      "code": "myspace_glitch/06-glitch-math-hybrids/neon-trash-oracle_20260709_112945.js",
+      "description": "REPO 11 & 15: Color Systems & Spectral Color · \"Hyperpop Rupture\" palette via cosine interpolation · High energy magenta/cyan/yellow bias",
+      "style": 0
+    },
+    {
+      "name": "neon-trash-oracle_20260709_114201",
+      "family": "neon",
+      "source": "myspace_glitch/06-glitch-math-hybrids/neon-trash-oracle_20260709_114201.html",
+      "code": "myspace_glitch/06-glitch-math-hybrids/neon-trash-oracle_20260709_114201.js",
+      "description": "MATH & NOISE (Lenia / Cuttlefish) · COLOR SYSTEMS (OKLab Hyperpop) · PATTERNS & MOIRÉ",
+      "style": 1
+    },
+    {
+      "name": "neon-trash-oracle_20260725_235816",
+      "family": "neon",
+      "source": "myspace_glitch/06-glitch-math-hybrids/neon-trash-oracle_20260725_235816.html",
+      "code": "myspace_glitch/06-glitch-math-hybrids/neon-trash-oracle_20260725_235816.js",
+      "description": "[damage_aesthetics / voronoi_systems] Hash & Noise functions · [color_systems] OKLab perceptual color interpolation · Hyper-saturated candy-acid palette generator",
+      "style": 2
+    },
+    {
+      "name": "neon_trash_oracle_20260709_132828",
+      "family": "neon",
+      "source": "myspace_glitch/06-glitch-math-hybrids/neon_trash_oracle_20260709_132828.html",
+      "code": "myspace_glitch/06-glitch-math-hybrids/neon_trash_oracle_20260709_132828.js",
+      "description": "NEON TRASH ORACLE WEATHER SYSTEM · A feral synthesis of 16 repos: Lenia, Cuttlefish Chromatics, Plateau Foam, · I Ching Fields, Abelian Sandpile, Moiré, Op Art, Glitchcore, Damage Aesthetics,",
+      "style": 3
+    },
+    {
+      "name": "neon_trash_oracle_20260709_133206",
+      "family": "neon",
+      "source": "myspace_glitch/06-glitch-math-hybrids/neon_trash_oracle_20260709_133206.html",
+      "code": "myspace_glitch/06-glitch-math-hybrids/neon_trash_oracle_20260709_133206.js",
+      "description": "glslVersion: THREE.GLSL3 applies implicitly via ShaderMaterial · [color_systems] + [glitchcore_style] Hyperpop Acid Palette · Offsets for Hot Pink, Electric Cyan, Neon Yellow, Ultraviolet",
+      "style": 4
+    },
+    {
+      "name": "neon_trash_oracle_20260709_133509",
+      "family": "neon",
+      "source": "myspace_glitch/06-glitch-math-hybrids/neon_trash_oracle_20260709_133509.html",
+      "code": "myspace_glitch/06-glitch-math-hybrids/neon_trash_oracle_20260709_133509.js",
+      "description": "OKLab-inspired candy-acid palette (color_systems, glitchcore_style) · Push saturation to hyperpop neon · Hyperbolic warp (lovecraft_os, dream_physics)",
+      "style": 5
+    },
+    {
+      "name": "neon_trash_oracle_20260725_233040",
+      "family": "neon",
+      "source": "myspace_glitch/06-glitch-math-hybrids/neon_trash_oracle_20260725_233040.html",
+      "code": "myspace_glitch/06-glitch-math-hybrids/neon_trash_oracle_20260725_233040.js",
+      "description": "Bypass projection/modelview to draw a full-screen quad directly in clip space · NEON TRASH ORACLE WEATHER SYSTEM · temporal_desync & saccadic_masking: Saccadic glitches and temporal time shifts",
+      "style": 6
+    },
+    {
+      "name": "prismatic-tape-oracle_20260625_162135",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic-tape-oracle_20260625_162135.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic-tape-oracle_20260625_162135.js",
+      "description": "",
+      "style": 2
+    },
+    {
+      "name": "prismatic_tape_oracle_20260618_194154",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260618_194154.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260618_194154.js",
+      "description": "",
+      "style": 3
+    },
+    {
+      "name": "prismatic_tape_oracle_20260618_195123",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260618_195123.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260618_195123.js",
+      "description": "",
+      "style": 4
+    },
+    {
+      "name": "prismatic_tape_oracle_20260618_200515",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260618_200515.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260618_200515.js",
+      "description": "",
+      "style": 5
+    },
+    {
+      "name": "prismatic_tape_oracle_20260618_202021",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260618_202021.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260618_202021.js",
+      "description": "",
+      "style": 6
+    },
+    {
+      "name": "prismatic_tape_oracle_20260619_204529",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_204529.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_204529.js",
+      "description": "",
+      "style": 0
+    },
+    {
+      "name": "prismatic_tape_oracle_20260619_205541",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_205541.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_205541.js",
+      "description": "",
+      "style": 1
+    },
+    {
+      "name": "prismatic_tape_oracle_20260619_211142",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_211142.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_211142.js",
+      "description": "",
+      "style": 2
+    },
+    {
+      "name": "prismatic_tape_oracle_20260619_211853",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_211853.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_211853.js",
+      "description": "",
+      "style": 3
+    },
+    {
+      "name": "prismatic_tape_oracle_20260619_212904",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_212904.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_212904.js",
+      "description": "",
+      "style": 4
+    },
+    {
+      "name": "prismatic_tape_oracle_20260619_214625",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_214625.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_214625.js",
+      "description": "",
+      "style": 5
+    },
+    {
+      "name": "prismatic_tape_oracle_20260619_215756",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_215756.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_215756.js",
+      "description": "",
+      "style": 6
+    },
+    {
+      "name": "prismatic_tape_oracle_20260619_221345",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_221345.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260619_221345.js",
+      "description": "",
+      "style": 0
+    },
+    {
+      "name": "prismatic_tape_oracle_20260625_161140",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260625_161140.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260625_161140.js",
+      "description": "",
+      "style": 1
+    },
+    {
+      "name": "prismatic_tape_oracle_20260625_161657",
+      "family": "tape",
+      "source": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260625_161657.html",
+      "code": "by_math/10_raymarched_3d_sdf_gyroids/prismatic_tape_oracle_20260625_161657.js",
+      "description": "",
+      "style": 2
+    }
+  ]
+}
