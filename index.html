@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#16071f">
+<title>NEON TRASH ORACLE — Corruption Laboratory</title>
+<style>
+:root{color-scheme:dark;--pink:#ff32c8;--lime:#d7ff4e;--cyan:#47fff3;--bg:#16071f;--edge:#69437d;--white:#fff5ff}
+*{box-sizing:border-box}
+html,body{height:100%;overflow:hidden;margin:0;background:var(--bg);color:var(--white);font-family:ui-monospace,Menlo,Consolas,monospace}
+button,input,select{font:inherit}button{touch-action:manipulation;cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+#app{height:100dvh;display:flex;flex-direction:column;min-height:0}
+header{height:51px;flex:none;display:flex;align-items:center;justify-content:space-between;gap:6px;padding:6px max(8px,env(safe-area-inset-right)) 6px max(8px,env(safe-area-inset-left));background:#210d30;border-bottom:1px solid var(--edge)}
+.brand{font-size:clamp(11px,3.7vw,18px);font-weight:1000;letter-spacing:-.7px;line-height:1.05;text-shadow:1px 0 var(--cyan),-1px 0 var(--pink)}
+.brand small{display:block;margin-top:4px;font-size:8px;color:var(--lime);letter-spacing:1.1px;text-shadow:none}
+.actions,.bar{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.actions{flex-wrap:nowrap}
+.btn{background:#342046;color:white;border:1px solid #8c68a0;border-radius:6px;padding:8px 9px;font-size:11px;white-space:nowrap}
+.btn.main{background:var(--pink);color:#18051c;border-color:var(--pink);font-weight:900}
+.btn.acid{background:var(--lime);color:#18051c;border-color:var(--lime);font-weight:900}
+.btn:active{transform:translateY(1px)}.btn[disabled]{opacity:.45}
+#stage{flex:1;min-height:60px;overflow:hidden;position:relative;background:#000;display:flex;align-items:center;justify-content:center;touch-action:none}
+#art{display:block;width:100%;height:100%;touch-action:none}
+#original{display:none;border:0;width:100%;height:100%;background:black}
+#overlay{position:absolute;top:8px;left:8px;z-index:4;background:#110b19cc;border:1px solid #633784;border-radius:4px;padding:5px 7px;font-size:10px;max-width:80%;pointer-events:none;color:var(--lime)}
+#status{position:absolute;bottom:7px;right:7px;z-index:4;background:#120819c9;color:#eac8ff;padding:4px 6px;font-size:9px;pointer-events:none}
+#handle{height:20px;flex:none;display:flex;align-items:center;justify-content:center;cursor:ns-resize;touch-action:none;background:linear-gradient(90deg,#41125c,#230631,#511062);border-block:1px solid #9b43c6}
+#handle:before{content:"";width:64px;height:4px;border-radius:6px;background:#ff72d2;box-shadow:0 0 9px #f2acf4}
+#panel{height:39dvh;min-height:145px;max-height:75dvh;flex:none;display:flex;flex-direction:column;background:#190f24}
+#tabs{display:flex;gap:3px;padding:5px 7px 0;overflow-x:auto;scrollbar-width:none;flex:none;border-bottom:1px solid #5f3c74}
+.tab{background:#332043;color:#cbb1dd;border:0;padding:8px 12px;white-space:nowrap;font-size:11px;border-radius:5px 5px 0 0}
+.tab.on{color:#16031c;background:var(--pink);font-weight:900}
+#pane{padding:11px 12px calc(18px + env(safe-area-inset-bottom));flex:1;min-height:0;overflow:auto;overscroll-behavior:contain}
+.view{display:none}.view.on{display:block}
+.h{color:var(--cyan);font-size:11px;letter-spacing:1px;font-weight:900;margin:0 0 7px}
+.muted{color:#c9b2d3;font-size:11px;line-height:1.55}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 13px}
+.field label{display:flex;justify-content:space-between;gap:4px;font-size:10px;color:#f6d7f6;margin-bottom:4px}
+.field output{color:var(--lime)}
+input[type=range]{width:100%;height:20px;accent-color:var(--pink)}
+select{display:block;width:100%;min-width:0;border-radius:6px;border:1px solid #8d56a1;background:#321b44;color:#fff;padding:9px 7px;font-size:12px}
+label.select{display:block;color:var(--cyan);font-size:10px;margin-bottom:10px}label.select select{margin-top:5px}
+.bar{margin:9px 0}.bar>.btn{flex:1 1 auto}
+hr{border:0;height:1px;background:#654775;margin:13px 0}
+#card{border:1px solid #6c367c;background:#250f32;border-radius:8px;padding:9px 11px;margin-top:7px;overflow-wrap:anywhere}
+#card strong{color:var(--lime);font-size:12px}#card p{margin:7px 0 0}
+a{color:var(--cyan)}
+#toast{display:none;position:absolute;z-index:8;left:50%;top:32%;transform:translateX(-50%);background:#201028ee;color:var(--lime);border:1px solid var(--pink);padding:12px;max-width:90%;box-shadow:0 0 20px #a20b7c9c;font-size:12px;text-align:center}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}.chip{display:inline-block;border:1px solid #a647b8;padding:4px 6px;margin:3px 3px 0 0;border-radius:4px;font-size:9px;color:#fab4f1}
+@media(max-width:390px){.brand{font-size:11px}.actions .btn{padding:7px 6px;font-size:10px}.fields{gap:9px}.tab{padding:8px 9px}}
+</style>
+</head>
+<body>
+<div id="app">
+<header>
+<div class="brand">NEON TRASH ORACLE<small>THE CORRUPTION LABORATORY ⟡ V1</small></div>
+<div class="actions"><button class="btn main" id="surprise">SURPRISE</button><button class="btn" id="new">NEW</button><button class="btn" id="pause">❚❚</button></div>
+</header>
+<div id="stage"><canvas id="art"></canvas><iframe id="original" title="Original source artwork" sandbox="allow-scripts allow-downloads"></iframe><div id="overlay">LIVE REMIX · TOUCH & DRAG</div><div id="status">starting graphics…</div><div id="toast" role="status"></div></div>
+<div id="handle" title="Drag to resize the artwork and controls"></div>
+<div id="panel">
+<nav id="tabs" aria-label="Art controls"><button class="tab on" data-tab="source">SOURCE</button><button class="tab" data-tab="mutation">MUTATE</button><button class="tab" data-tab="color">COLOR</button><button class="tab" data-tab="breed">BREED</button><button class="tab" data-tab="export">EXPORT</button><button class="tab" data-tab="about">ARCHIVE</button></nav>
+<div id="pane">
+<section class="view on" id="view-source">
+<div class="bar"><button class="btn main" id="remix">LIVE REMIX</button><button class="btn" id="exact">EXACT ORIGINAL</button></div>
+<label class="select">Source artwork — Neon Trash / Prismatic Tape<select id="source"></select></label>
+<div id="card"><strong id="sourceName">Loading sources…</strong><p class="muted" id="sourceDesc">Each original remains accessible, alongside our remix engine.</p></div>
+<div class="bar"><button class="btn acid" id="reseed">RESEED</button><button class="btn" id="mutateOnce">MUTATE THIS</button><button class="btn" id="sourceLink">SOURCE CODE ↗</button></div>
+<p class="muted">Exact Original loads the archived sketch without changing its underlying math. Live Remix uses a shared, variable-driven descendant engine. Different modes are deliberately labeled.</p>
+</section>
+<section class="view" id="view-mutation">
+<div class="h">MUTATE THE MATH · EVERYTHING IS LIVE</div><label class="select">Geometry / topology<select id="pattern"><option value="0">01 · Oracle Eye / Moiré</option><option value="1">02 · Cuttlefish Foam</option><option value="2">03 · Quasicrystal Star</option><option value="3">04 · Dream Tape Ribbons</option><option value="4">05 · Runic Halation</option><option value="5">06 · Compression Cathedral</option><option value="6">07 · Prismatic Tunnel</option></select></label>
+<div class="fields" id="sliders"></div>
+</section>
+<section class="view" id="view-color">
+<div class="h">SPECTRAL CHEMISTRY</div>
+<label class="select">Palette<select id="palette"></select></label>
+<div class="fields" id="colorsliders"></div>
+<div class="bar"><button class="btn acid" id="palShuffle">SHUFFLE PALETTE</button><button class="btn" id="colorCycle">COLOR CYCLE: ON</button></div>
+<div class="muted">Palettes are real, editable color gradients evaluated inside the shader, not a filter laid over finished art.</div>
+</section>
+<section class="view" id="view-breed">
+<div class="h">CROSSBREED TWO SHADER GENOMES</div>
+<div class="two"><label class="select">Parent A<select id="parentA"></select></label><label class="select">Parent B<select id="parentB"></select></label></div>
+<div class="fields" id="breedSliders"></div>
+<div class="bar"><button class="btn main" id="breed">BREED NEW MONSTER</button><button class="btn" id="breedSurprise">RANDOM PARENTS</button></div>
+<p class="muted">Breeding crosses the geometry, reaction-diffusion, prism, tape damage, noise, color, and feedback parameters. It creates a new live preset; source files stay untouched.</p>
+</section>
+<section class="view" id="view-export">
+<div class="h">EXPORT / SAVE</div>
+<div class="two"><label class="select">Image scale<select id="scale"><option value="1">Screen resolution</option><option value="2">2× pixels</option><option value="3">3× pixels (if GPU allows)</option></select></label><label class="select">Clip duration<select id="seconds"><option value="5">5 seconds</option><option value="10">10 seconds</option><option value="30">30 seconds</option></select></label></div>
+<div class="bar"><button class="btn acid" id="png">SAVE PNG</button><button class="btn main" id="video">RECORD VIDEO</button><button class="btn" id="stopVideo" disabled>STOP</button></div>
+<p class="muted" id="videoInfo">Video uses your browser's supported MP4 or WebM encoder. MP4 is preferred where available. Seamless looping is not yet guaranteed for feedback modes.</p>
+<hr>
+<div class="h">LOCAL PRESETS</div><div class="bar"><button class="btn" id="savePreset">SAVE CURRENT</button><button class="btn" id="restorePreset">LOAD SAVED</button></div>
+<p class="muted">Presets save in this browser. The art runs without a server or Netlify deploy.</p>
+</section>
+<section class="view" id="view-about"><div class="h">ORIGINAL SHADER ARCHIVE</div><p class="muted" id="aboutText">Loading the complete artist-owned catalog…</p><div id="sourceList" class="muted"></div><hr><p class="muted">Free static GitHub Pages hosting. Uses WebGL2. The source archive is loaded from the artist's public GitHub repository; the remix shader itself does not require a paid service. Some original sketches may have their own original compatibility or performance issues.</p></section>
+</div>
+</div>
+</div>
+<script src="./app.js" defer></script>
+</body></html>
