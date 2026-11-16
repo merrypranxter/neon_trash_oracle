@@ -174,7 +174,7 @@ void main(){
  col+=glow*uBloom*0.55;
  float line=0.5+0.5*sin(uv.y*uRes.y*3.14159265);
  col*=1.0-uCRT*0.28*(1.0-line);
- float vignette=smoothstep(1.65,0.27,length((uv-0.5)*2.0));
+ float vignette=1.0-smoothstep(0.27,1.65,length((uv-0.5)*2.0));
  col*=mix(1.0,vignette,uCRT*0.28);
  float grain=fract(sin(dot(floor(uv*uRes*0.55),vec2(12.9898,78.233))+floor(uTime*14.0))*43758.5453);
  col+=(grain-0.5)*uCRT*0.065;
